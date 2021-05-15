@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment17</title>
+    </head>
+   <style>
+       .box{
+           text-align: center;
+           
+       }
+       .button{
+           text-align: center;
+       }
+       #resbutton{
+           background-color: antiquewhite;
+           margin-top: 5%;
+        }
+    </style>
+    
+    <body>
+        <div class="box">
+            <input type=number id="result">
+        </div>
+        <div class="button">
+           <button id="resbutton" onclick="myfun()">onclick</button>
+        </div>
+        <script>
+                function myfun(){
+                    var option=window.prompt("1.addition\n2.subtraction\n3.multiplication\n4.division\n5.exit\nenter your choice");
+                    var option1=parseInt(option);
+                    if(isNaN==false||(option1>=1&&option1<=4)){
+                        var number1=window.prompt("enter first number");
+                        var num1=parseFloat(number1);
+                        var number2=window.prompt("enter second number");
+                        var num2=parseFloat(number2);
+                        switch(option1){
+                            case 1:var result1=num1+num2;
+                                    var res1=document.getElementById("result");
+                                    res1.value=result1;
+                                    break;
+                            case 2:var result2=num2-num1;
+                                    var res2=document.getElementById("result");
+                                    res2.value=result2;
+                                    break;
+                            case 3:var result3=num1*num2;
+                                    var res3=document.getElementById("result");
+                                    res3.value=result3;
+                                    break;
+                            case 4:var result4=num1/num2;
+                                    var res4=document.getElementById("result");
+                                    res4.value=result1;
+                                    break;
+                        }
+                    }else{
+                        alert("enter a valid number");
+                        myfun();
+                    }
+                }
+        </script>
+    </body>
+</html>
